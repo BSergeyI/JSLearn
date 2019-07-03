@@ -25,13 +25,13 @@ var userCart = [];
 class ProductList {
 	constructor () {
 		this.products = []
+		this.sumprices = 0
 		this._init ()
-		this.summer = ''
 	}
 	_init () {
 		this.fetchProducts ()
 		this.render ()
-		this.sum ()
+		this.sumof ()
 	}
 	fetchProducts () {
 		this.products = fetchData ()
@@ -43,13 +43,12 @@ class ProductList {
 			block.insertAdjacentHTML ('beforeend', prod.render ())
 		})
 	}
-	sum () {
-			let sumprice = 0
-		this.products.forEach (sumprice => {
-			
-			sumprice += +this.products.price
-			console.log(sumprice)
-		this.summer = sumprice
+	sumof () {
+		let ppricesum = 0
+		this.products.forEach (pself => {
+			console.log(pself.price);
+			ppricesum += parseInt(pself.price);
+			 this.sumprices = ppricesum;
 		})
 
 	}
