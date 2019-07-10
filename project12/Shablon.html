@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SHABLON</title>
+  <link rel="stylesheet" href="style/style_form.css">
+  <script type="text/javascript" src="js/wcommas.js"></script>
+  <script type="text/javascript" src="js/patt_form14.js"></script>
+</head>
+<body>
+	<div id="content">
+<form name="jsform" action="" method="post" onsubmit="subValid ()">
+	<fieldset>
+		<legend>Форма обратной связи</legend>
+		<br> 
+		<label for="Name">Ваше имя:</label>
+        <input type="text" name="Name" onBlur="this.value=this.value.toUpperCase()" required><br><br>
+        <label for="phone">Ваш № телефона:</label>
+        <input type="text" id="phone" onBlur="this.value=this.value.toUpperCase()" required>
+                       <br> <br>
+    	<label for="E-mail">Ваша e-mail:</label>
+        <input type="text" id="e-mail" required>
+        <br><br>
+        <label for="text">Ваш отзыв:</label><br>
+        <textarea name="latter" rows="3" cols="45"> </textarea>
+                          <br><br>
+        <input type="submit" value="Отправить" >
+
+      </fieldset>
+   </form>
+</div>
+
+</body>
+
+</html>
