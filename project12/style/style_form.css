@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    justify-content: flex-start;
+    background:  #D3E9F9;
+    background-size: 100%;
+    min-width: 400px;
+    max-width: 1100px;
+    width: 99%;
+    
+}
+
+#block {
+    background-color: #D3E9F9;
+    border: 1px solid #54985B;
+    padding: 10px;
+    margin: 15px auto;
+    width: 90%;
+    text-align: center;
+}
+
+nav {
+    background-color: #D3E9F9;
+    padding: 15px 10px;
+    margin: 15px auto;
+    width: 90%;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+header {
+    background-color: #D3E9F9;
+    border: 1px solid #54985B;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: left;
+    width: 90%;
+}
+
+footer {
+    background-color: #D3E9F9;
+    border: 1px solid #54985B;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: left;
+    width: 90%;
+    min-width: 800px;
+    max-width: 1100px;
+}
+
+#content {
+    background-color: #D3E9F9;
+    border: thin #54985B solid;
+    padding: 10px;
+    margin: 10px;
+    min-width: 50%;
+    max-width: 380px;
+
+}
+legend {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+label {
+     display: inline-block;
+    width: 40%;
+    text-align: right;
+}
+article header {
+    background-color: #CDF0EB;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    width: 90%;
+    min-width: 800px;
+    max-width: 1100px;
+}
+
+time {
+    color: #999999;
+    float: right;
+}
+
+.floatFigure {
+    float: left;
+    margin: 2px 25px 2px 2px;
+}
+
+.floatFigure figcaption {
+    max-width: 150px;
+    font-size: small;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+#scriptHTML {
+    background-color: #DEE9E9;
+    border: thin #533D3D solid;
+    padding: 0 15px 15px;
+}
