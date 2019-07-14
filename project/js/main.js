@@ -3,6 +3,9 @@ const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-a
 let app = new Vue ({
     el: '#app',
     data: {
+        searchLine: '',
+        name: 'searchLine',
+        backstyle: 'inherit',
         catalogUrl: '/catalogData.json',
         products: [],
         imgCatalog: 'https://placehold.it/200x150'
@@ -17,6 +20,16 @@ let app = new Vue ({
         },
         addProduct (product) {
             console.log (product.id_product)
+        },
+        filterGoods () {
+            for (let at of this.products) {
+                if (at.product_name == this.searchLine)
+               this.backstyle = 'green';    
+            }
+             console.log (this.searchLine);
+        },
+        textHandle (searchLine) {
+            this.name = 'Searchline =' + this.searchLine;
         }
     },
     mounted () {

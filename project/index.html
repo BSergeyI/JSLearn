@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,31 +7,38 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!--1.	Добавить методы и обработчики событий для поля поиска. 
+   Создать в объекте данных поле searchLine и привязать к нему 
+   содержимое поля ввода. 
+   На кнопку Искать добавить обработчик клика, 
+   вызывающий метод FilterGoods.   -->
     <div id="app">
         <header>
             <div class="logo">E-shop</div>
             <div class="cart">
-                <form action="#" class="search-form">
-                    <input type="text" class="search-field">
-                    <button class="btn-search" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </form>
-                <button class="btn-cart" type="button">Корзина</button>
+               <form action="#" class="search-form" >
+                <input type="text" class="search-field" v-model="searchLine" 
+                 @keyup="textHandle">
+                 <p class="jv">{{name}}</p>
+                  <button class="btn-search" type="submit" @click="filterGoods">
+                  <i class="fas fa-search"></i>
+                 </button>
+               </form>
+                <button class="btn-cart" type="button" >Корзина</button>
                 <div class="cart-block invisible"></div>
             </div>
         </header>
         <main>
-            <div class="products">
+            <div class="products" >
                 <div class="product-item" data-id="${this.id_product}" v-for="product of products">
-                     <img :src="imgCatalog" alt="Some img">
-                     <div class="desc">
-                         <h3>{{ product.product_name }}</h3>
+                     <img :src="imgCatalog" alt="Some img" >
+                     <div class="desc" >
+                         <h3>{{ product.product_name }} </h3>
                          <p>{{ product.price }} $</p>
                          <button class="buy-btn" @click="addProduct(product)">Купить</button>
                      </div>
                 </div>
-            </div>
+            </div>     
         </main>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>

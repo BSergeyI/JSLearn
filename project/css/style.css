@@ -159,13 +159,22 @@ img {
 }
 .search-field:focus{
     outline: none;
+   
 }
 .search-field {
     box-sizing: border-box;
     width: 200px;
     color: #fafafa;
-    padding: 10px;
+    padding: 0 0 -20px 0;
+    margin-bottom: 10px;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #fafafa;
+    opacity: .6;
+    line-height: 40px;
+}
+.jv {
+	outline: none;
+	opacity: .4;
+	margin: -30px 0 0;
 }
